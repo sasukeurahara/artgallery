@@ -90,24 +90,16 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            font-family: 'Satisfy', cursive;
-            font-size: 4.5rem;
-            font-weight: 400;
-            color: white;
-            text-shadow: 
-                -3px -3px 0 #e91e63,
-                3px -3px 0 #e91e63,
-                -3px 3px 0 #e91e63,
-                3px 3px 0 #e91e63,
-                -2px -2px 0 #e91e63,
-                2px -2px 0 #e91e63,
-                -2px 2px 0 #e91e63,
-                2px 2px 0 #e91e63,
-                0 0 15px rgba(233, 30, 99, 0.6);
+        .logo {
+            max-width: 400px;
+            height: 220px;
             margin-bottom: 10px;
-            letter-spacing: 2px;
-            transform: rotate(-1deg);
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .subtitle {
@@ -299,11 +291,9 @@
             50% { transform: scale(1.1); }
         }
 
-
-
         @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
+            .logo {
+                max-width: 90%;
             }
             
             .subtitle {
@@ -325,7 +315,7 @@
 <body>
     <div class="container">
         <header>
-            <h1> Soumya's Art Gallery </h1>
+            <img src="img/logo.png" alt="Soumya's Art Gallery" class="logo">
             <p class="subtitle">Where creativity meets beauty❤️</p>
         </header>
         <div class="gallery" id="gallery">
